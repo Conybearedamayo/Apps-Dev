@@ -2,29 +2,54 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
+/* HEADER ROW */
 .header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ddd; /* Divider line */
 }
 
+.header-row h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* SEARCH + CART */
 .search-bar {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
+  padding: 10px 14px;
+  border: 1px solid #bbb;
   border-radius: 6px;
-  width: 220px;
+  width: 300px; /* Bigger like your drawing */
+  font-size: 1rem;
 }
 
+.cart-button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.cart-button:hover {
+  transform: scale(1.1);
+}
+
+/* PRODUCT GRID */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 
-/* Pagination Styling */
+/* PAGINATION */
 .pagination {
   display: flex;
   justify-content: center;
@@ -35,23 +60,23 @@
 .pagination button {
   padding: 6px 12px;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  background: #f5f5f5;
+  border: 1px solid #4a4545;
+  background: #5e5c5c;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
-.pagination button:hover {
+.pagination button:hover:not(:disabled) {
   background: #ddd;
 }
 
 .pagination button.active {
-  background: #333;
+  background: #605e5e;
   color: white;
   font-weight: bold;
 }
 
 .pagination button:disabled {
-  background: #eee;
+  background: #aaa;
   cursor: not-allowed;
 }

@@ -50,6 +50,7 @@ function ProductListingPage() {
   };
 
   return (
+    
     <div className="product-listing-page">
       <div className="header-row">
         <h2>All Products</h2>
@@ -63,6 +64,7 @@ function ProductListingPage() {
             setCurrentPage(1); // Reset to first page when searching
           }}
         />
+        <button className="cart-button">🛒</button>
       </div>
 
       <div className="product-grid">

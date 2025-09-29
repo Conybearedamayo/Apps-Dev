@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1 className="logo">UrbanUtopia Shop</h1>
+        <h1 className="logo"> 7Lepitin Shop</h1>
       </header>
 
       <main className="app-main">
@@ -13,7 +13,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© {new Date().getFullYear()} E-Commerce App. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Need help? Contact support@7lepitin.com.</p>
       </footer>
     </div>
   );

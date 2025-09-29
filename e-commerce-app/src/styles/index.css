@@ -35,3 +35,23 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+.app-header {
+  width: 100%;
+  background: f4f4f4;            /* Clean white background */
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid #ddd; /* Divider line under header */
+  position: sticky;             /* Optional: stays at top on scroll */
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 1px;
+}
