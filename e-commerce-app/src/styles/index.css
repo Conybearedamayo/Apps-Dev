@@ -14,13 +14,13 @@ body {
   flex-direction: column;
 }
 
-/* Basic Link Styling */
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Basic Button Styling */
+
 button {
   cursor: pointer;
   padding: 10px 15px;
@@ -38,13 +38,13 @@ button:hover {
 
 .app-header {
   width: 100%;
-  background: f4f4f4;            /* Clean white background */
+  background: f4f4f4;      
   padding: 15px 30px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 2px solid #ddd; /* Divider line under header */
-  position: sticky;             /* Optional: stays at top on scroll */
+  border-bottom: 2px solid #ddd; 
+  position: sticky;            
   top: 0;
   z-index: 100;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import ProductListingPage from './pages/ProductListingPage';
+import { CartProvider } from "./context/CartContext";
+
 
 function App() {
   return (

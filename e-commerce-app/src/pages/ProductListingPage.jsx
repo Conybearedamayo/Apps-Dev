@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchProducts } from "../utils/api";
 import ProductCard from "../components/ProductCard";
 import "../styles/ProductListingPage.css";
+import { useCart } from "../context/CartContext"; // ✅ ADD THIS
 
 function ProductListingPage() {
   const [products, setProducts] = useState([]);
@@ -13,11 +14,13 @@ function ProductListingPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
+  const { addToCart } = useCart(); // ✅ ADD THIS
+
   useEffect(() => {
     const getProducts = async () => {
       try {
         setLoading(true);
-        const data = await fetchProducts(50); // Fetch more products for pagination
+        const data = await fetchProducts(50);
         setProducts(data.products);
       } catch (err) {
         setError("Failed to fetch products. Please try again later.");
@@ -33,12 +36,10 @@ function ProductListingPage() {
   if (loading) return <div className="loading">Loading products...</div>;
   if (error) return <div className="error-message">{error}</div>;
 
-  // Filter products by search
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Pagination Logic
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
   const paginatedProducts = filteredProducts.slice(
     (currentPage - 1) * itemsPerPage,
@@ -50,7 +51,6 @@ function ProductListingPage() {
   };
 
   return (
-    
     <div className="product-listing-page">
       <div className="header-row">
         <h2>All Products</h2>
@@ -61,7 +61,7 @@ function ProductListingPage() {
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
-            setCurrentPage(1); // Reset to first page when searching
+            setCurrentPage(1);
           }}
         />
         <button className="cart-button">🛒</button>
@@ -70,7 +70,7 @@ function ProductListingPage() {
       <div className="product-grid">
         {paginatedProducts.length > 0 ? (
           paginatedProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} addToCart={addToCart} /> // ✅ ADD CART HERE
           ))
         ) : (
           <p>No products found.</p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/ProductCard.css';
 
-function ProductCard({ product }) {
+function ProductCard({ product, addToCart }) { 
   const { title, price, discountPercentage, stock, rating, thumbnail } = product;
 
   const discountedPrice = price - (price * (discountPercentage / 100));
@@ -27,7 +27,15 @@ function ProductCard({ product }) {
         </div>
 
         <div className="product-actions">
-          <button className="add-to-cart-btn">🛒 Add to Cart</button>
+          
+          {/* ✅ FIX: Add click handler */}
+          <button
+            className="add-to-cart-btn"
+            onClick={() => addToCart(product)}
+          >
+            🛒 Add to Cart
+          </button>
+
           <button className="view-details-btn">View Details</button>
         </div>
       </div>
