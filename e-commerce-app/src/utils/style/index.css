@@ -1,0 +1,23 @@
+/* ... (existing global styles) ... */
+
+.app-header {
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* Pushes footer to the bottom */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
