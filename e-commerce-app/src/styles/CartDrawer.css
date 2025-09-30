@@ -85,4 +85,27 @@
   font-weight: bold;
   padding: 10px 0;
 }
+.cart-footer {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  background: #fff;
+}
+
+.checkout-btn {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s ease;
+  width: 100%;
+}
+
+.checkout-btn:hover {
+  background: #e14b4f;
+}
 
