@@ -36,22 +36,16 @@ button:hover {
   background-color: #0056b3;
 }
 
-.app-header {
-  width: 100%;
-  background: f4f4f4;      
-  padding: 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-bottom: 2px solid #ddd; 
-  position: sticky;            
-  top: 0;
-  z-index: 100;
+.cart-button {
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 0;    /* Reset floating */
+  right: 0;
+  margin-left: 1520px;
 }
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #222;
-  letter-spacing: 1px;
+.app-header {
+  padding: 5px 20px;
 }

@@ -30,11 +30,13 @@ function ProductCard({ product, addToCart }) {
           
           {/* ✅ FIX: Add click handler */}
           <button
-            className="add-to-cart-btn"
-            onClick={() => addToCart(product)}
+           className="add-to-cart-btn"
+          onClick={() => addToCart(product)}
+           title="Add to Cart" // this shows text on hover
           >
-            🛒 Add to Cart
+          Add to Cart 
           </button>
+
 
           <button className="view-details-btn">View Details</button>
         </div>

@@ -17,11 +17,32 @@ export const CartProvider = ({ children }) => {
       }
       return [...prev, { ...product, quantity: 1 }];
     });
-    alert(`${product.title} added to cart!`);
+  };
+
+  const removeFromCart = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id));
+  };
+
+  const increaseQty = (id) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
+  };
+
+  const decreaseQty = (id) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.id === id && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item
+      )
+    );
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQty, decreaseQty }}>
       {children}
     </CartContext.Provider>
   );

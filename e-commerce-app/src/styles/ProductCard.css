@@ -77,12 +77,12 @@
 }
 
 .add-to-cart-btn {
-  background: #27ae60;
-  color: white;
+  background: #a8a9a9;
+  color: rgb(13, 12, 12);
 }
 
 .add-to-cart-btn:hover {
-  background: #219150;
+  background: #d2d5d3;
 }
 
 .view-details-btn {
@@ -114,4 +114,5 @@
   border: none;
   cursor: pointer;
 }
+
 

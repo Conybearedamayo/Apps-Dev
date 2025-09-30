@@ -80,3 +80,20 @@
   background: #aaa;
   cursor: not-allowed;
 }
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cart-container {
+  margin-left: auto;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

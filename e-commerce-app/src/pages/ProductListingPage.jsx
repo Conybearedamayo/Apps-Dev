@@ -64,7 +64,7 @@ function ProductListingPage() {
             setCurrentPage(1);
           }}
         />
-        <button className="cart-button">🛒</button>
+        
       </div>
 
       <div className="product-grid">
