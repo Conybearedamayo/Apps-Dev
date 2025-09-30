@@ -44,7 +44,7 @@ button:hover {
   position: relative;
   top: 0;    /* Reset floating */
   right: 0;
-  margin-left: 1400px;
+  margin-left: 1350px;
 }
 .app-header {
   padding: 5px 20px;
