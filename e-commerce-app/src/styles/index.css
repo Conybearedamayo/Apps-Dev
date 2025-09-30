@@ -46,4 +46,6 @@ button:hover {
   right: 0;
   margin-left: 1400px;
 }
-
+.app-header {
+  padding: 5px 20px;
+}
